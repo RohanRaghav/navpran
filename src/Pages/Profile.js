@@ -22,7 +22,7 @@ const Profile = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `http://localhost:3001/api/userData?username=${username}`
+          `https://navpranserver.vercel.app/api/userData?username=${username}`
         );
 
         if (!response.ok) {

@@ -43,7 +43,7 @@ const Available = () => {
     e.preventDefault();
   
     try {
-      const response = await axios.post('http://localhost:3001/api/request-blood', formDetails);
+      const response = await axios.post('https://navpranserver.vercel.app/api/request-blood', formDetails);
   
       if (response.status === 200) {
         console.log("Blood request submitted successfully:", response.data);

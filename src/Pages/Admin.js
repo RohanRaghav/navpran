@@ -21,7 +21,7 @@ const Admin = () => {
   useEffect(() => {
     const fetchDonors = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/api/donors");
+        const response = await axios.get("https://navpranserver.vercel.app/api/donors");
         setDonors(response.data);
       } catch (error) {
         console.error("Error fetching donors:", error);
@@ -45,7 +45,7 @@ const Admin = () => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `http://localhost:3001/api/userData?username=${username}`
+          `https://navpranserver.vercel.app/api/userData?username=${username}`
         );
 
         if (response.status !== 200) {
@@ -99,7 +99,7 @@ const Admin = () => {
         vouchers: formData.vouchers,
       };
 
-      await axios.put(`http://localhost:3001/api/donors/${editingDonor._id}`, updatedDonor);
+      await axios.put(`https://navpranserver.vercel.app/api/donors/${editingDonor._id}`, updatedDonor);
       setDonors((prev) =>
         prev.map((donor) =>
           donor._id === editingDonor._id ? updatedDonor : donor
@@ -161,7 +161,7 @@ const Admin = () => {
   
     try {
       const response = await axios.post(
-        `http://localhost:3001/donors/${donorId}/share-voucher`,
+        `https://navpranserver.vercel.app/donors/${donorId}/share-voucher`,
         formData,
         {
           headers: {

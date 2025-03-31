@@ -49,11 +49,11 @@ const Navbar = () => {
   
       if (isLogin) {
         // For login, use this endpoint and include only login-related data
-        endpoint = "http://localhost:3001/api/login";
+        endpoint = "https://navpranserver.vercel.app/api/login";
         requestData = { ...formData }; // Include only form data for login
       } else {
         // For sign-up, use this endpoint and include sign-up related data
-        endpoint = "http://localhost:3001/api/signup";
+        endpoint = "https://navpranserver.vercel.app/api/signup";
         requestData = { ...formData, role }; // Include form data and role for signup
       }
   

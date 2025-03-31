@@ -17,7 +17,7 @@ const ShareVoucher = ({ donor }) => {
   
     try {
       const response = await axios.post(
-        `http://localhost:3001/api/donors/${donorId}/share-voucher`,
+        `https://navpranserver.vercel.app/api/donors/${donorId}/share-voucher`,
         formData,
         {
           headers: { 'Content-Type': 'multipart/form-data' },

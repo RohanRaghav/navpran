@@ -9,7 +9,7 @@ const Notification = () => {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/api/notifications");
+        const response = await axios.get("https://navpranserver.vercel.app/api/notifications");
         if (response.status === 200) {
           setNotifications(response.data.notifications);
         }
